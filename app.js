@@ -9,7 +9,8 @@ const
     // userInfo = document.querySelector('#user-info'),
     userIcon = document.querySelector('.user-info-icon'),
     userinfotab = document.querySelector('.user-info-tab'),
-    userinfo = document.querySelectorAll('#label')
+
+    label = document.querySelectorAll('#label')
 ;
 
 
@@ -21,6 +22,23 @@ bell.addEventListener('click', () => {
     bell.classList.toggle('active')
 })
 
+userIcon.addEventListener('click', ()=> {
+    userinfotab.classList.toggle('active')
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 notificationDash.addEventListener('click' ,()=> {
     notificationDash.classList.toggle('active');
 })
@@ -29,13 +47,7 @@ notificationCheck.addEventListener('click', () => {
     notificationCheck.classList.toggle('active');
 })
 
-
-userIcon.addEventListener('click', ()=> {
-    userinfotab.classList.toggle('active')
-})
-
-
-userinfo.forEach(info => {
+label.forEach(info => {
     info.addEventListener('click', e=> {
         e.target.classList.toggle('active')
     })

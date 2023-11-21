@@ -9,6 +9,7 @@ body {
     width: 1440px;
     height:auto;
     margin: 0 auto;
+    background-color: #F1F1F1;
 }
 
 .container {
@@ -16,7 +17,6 @@ body {
     height: auto;
     margin: 0 auto;
     position: relative;
-    background-color: #F1F1F1;
 }
 
 
@@ -133,7 +133,7 @@ nav {
 
 .notification-display {
     position: absolute;
-    top: 80px;
+    top: 72px;
     right: 20px;
 }
 
@@ -153,6 +153,7 @@ nav {
 .notification-bell-tab.active {
     display: block;
 }
+
 
 #notification-tab-header, #notification-icons {
     display: flex;
@@ -410,6 +411,144 @@ nav {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 1440px;
+    height: auto;
+    padding-top: 32px;
+}
+
+.trial-period {
+    width: 800px;
+    height: 58px;
+    padding: 10px 20px;
+
+    background-color: #1C181D;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.trial-period div {
+    width: 139px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#desktop-btn {
+    width: 99px;
+    height: 28px;
+    border-radius: 5px;
+
+    border: 0;
+    background-color: #F1F1F1; 
+}
+
+#mobile-btn {
+    display: none;
+}
+
+#remove-trial {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
+.trial-period p {
+    color:white;
+}
+
+.setup-guide {
+    width:800px;
+    height: auto;
+    padding: 20px;
+    margin-top: 16px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#setup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#setup div h1 {
+    margin-bottom: 5px;
+}
+
+
+#setup .arrow {
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+}
+
+
+#progress-tab {
+    width: 168px;
+    height: 16px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#progress-bar {
+    width: 72px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #F1F1F1;
+}
+
+#progress-indicator {
+    width:20px;
+    height: 4px;
+    background-color: #1C181D;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width:390px) {
     
     body,.container {
@@ -427,8 +566,6 @@ nav {
     #shopify-logo {
         width: 32px;
         height: 32px;
-        /* background-color: red; */
-
         background-image: url(https://crushingit.tech/hackathon-assets/shopify-icon.svg);
     }
 
@@ -480,8 +617,9 @@ nav {
     /* notification display tabs */
 
     .notification-display {
-        top: 80px;
+        top: 72px;
         right: 15px;
+        z-index: 100;
     }
 
     .notification-bell-tab {
@@ -491,5 +629,111 @@ nav {
 
     /* notification display tabs */
 
+
+    main {
+        width: 390px;
+    }
+    
+    .trial-period {
+        width: 100%;
+        height: 104px;
+        padding: 12px 8px 12px 16px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    
+        border-radius: 0px;
+
+        position: relative;
+    }
+
+
+    #remove-trial {
+        position: absolute;
+        top: 30px;
+        right: 10px;
+    }
+    
+
+    
+    .trial-period div {
+        width: 139px;
+        height: 32px;
+    }
+
+
+    #mobile-btn {
+        display: block;
+        width: 56px;
+        height: 28px;
+        border-radius: 5px;
+        border: 0;
+        background-color: #F1F1F1;
+    }
+
+    
+    #desktop-btn {
+        display: none;
+    }
+
+
+    
+    .setup-guide {
+        width:100%;
+        height: auto;
+        border-radius: 0px;
+        padding: 20px;
+
+        position: relative;
+    }
+    
+
+    #setup {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #setup div h1 {
+        margin-bottom: 5px;
+    }
+
+
+    #setup .arrow {
+        width: 20px;
+        height: 20px;
+        background-color: blue;
+
+        position: absolute;
+        top: 20px;
+        right: 30px;
+    }
+
+
+    #progress-tab {
+        width: 168px;
+        height: 16px;
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #progress-bar {
+        width: 72px;
+        height: 4px;
+        border-radius: 5px;
+        background-color: #F1F1F1;
+    }
+
+    #progress-indicator {
+        width:20px;
+        height: 4px;
+        background-color: #1C181D;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
 
 }
