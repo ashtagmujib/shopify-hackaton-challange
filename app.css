@@ -1,0 +1,495 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    width: 1440px;
+    height:auto;
+    margin: 0 auto;
+}
+
+.container {
+    width: 1440px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    background-color: #F1F1F1;
+}
+
+
+nav {
+    width: 1440px;
+    height: 58px;
+    padding: 0 20px;
+    background-color: #1C181D;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+#shopify-logo {
+    width: 200px;
+    height: 32px;
+
+    background-image:url(https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg);
+    background-repeat: no-repeat;
+}
+
+.input-control {
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+#search {
+    width: 480px;
+    height: 32px;
+
+    outline: none;
+    background-color: #322F33;
+    border: 1px solid #616161;
+    border-radius: 5px;
+
+    text-indent: 30px;
+    color: #B5B5B5;
+}
+
+
+#search:hover {
+    border: 1px solid #EBEBEB;
+}
+
+
+#search:focus, #search:active {
+    border: 2px solid #EBEBEB;
+}
+
+
+#search-logo {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+
+    width: 15px;
+    height: 15px;
+}
+ 
+#search-logo path {
+    fill: #B5B5B5;
+}
+
+
+#search::placeholder {
+    text-indent: 30px;
+    color: #B5B5B5;
+}
+
+
+.notifications {
+    width: 182px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#notification-bell {
+    width:32px;
+    height: 32px;
+    background-color: #322F33;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#notification-bell.active{
+    background-color: #616161;
+}
+
+
+@media(min-width:480px) and (max-width:1440px) {
+
+    #notification-bell:hover {
+        background-color: #616161;
+    }
+}
+
+
+#bell {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* notification display tabs */
+
+.notification-display {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+}
+
+
+.notification-bell-tab {
+    width: 383px;
+    height: 136px;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+
+    display: none;
+}
+
+.notification-bell-tab.active {
+    display: block;
+}
+
+#notification-tab-header, #notification-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#notification-icons {
+    width: 56px;
+    height: 20px;
+}
+
+
+#notification-check-mark {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px; 
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #FFFFFF;
+}
+
+
+
+#notification-check-mark:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #616161;
+    border-radius: 50%;
+}
+
+#notification-check-mark svg {
+    width:14px;
+    height: 14px;
+}
+
+#notification-check-mark svg path {
+    fill: #616161;
+}
+
+
+#notification-dash {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+
+}
+
+#notification-dash.active, #notification-check-mark.active{
+    border: 1px solid #005BD3;
+}
+
+#notification-dash #dash {
+    width: 14px;
+    height: 14px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#notification-dash #dash div{
+    background-color: #616161;
+    width: 14px;
+    height: 2px;
+    border-radius: 3px;
+}
+
+#notification-dash #dash div:nth-of-type(2) {
+    width: 10px;
+    margin-top: 2px;
+}
+
+#notification-dash #dash div:nth-of-type(3) {
+    width: 6px;
+    margin-top: 2px;
+}
+
+
+.notification-info {
+    width: 100%;
+    height: 68px;
+    padding: 15px;
+    margin-top: 16px;
+    background-color: #F1F1F1;
+
+    text-align: center;
+}
+
+
+/* notification display tabs */
+
+
+
+
+
+
+
+
+
+
+
+#user-info {
+    width: 142px;
+    height: 32px;
+    background-color: #322F33;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#user-info p {
+    font-size: 14px;
+    text-indent: 5px;
+    color: white;
+}
+
+
+#user-logo {
+    width: 28px;
+    height: 28px;
+
+    color: #656266;
+    background-color: #36FBA1;
+    border-radius: 5px;
+    margin-right: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.user-info-tab {
+    width: 320px;
+    height: 390px;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 5px 0;
+
+    align-items: center;
+    flex-direction: column;
+
+    display: none;
+}
+
+.user-info-tab.active {
+    display: flex;
+}
+
+.user-data {
+    width: 308px;
+    height: 72px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#main-data {
+    width: 308px;
+    height: 36px;
+    padding: 5px;
+
+    border-radius: 5px;
+    background-color: #F1F1F1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#main-data div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#main-data div #user-logo {
+    text-indent: 3px;
+}
+
+.user-data #main-data p {
+    font-size: 15px;
+}
+
+.user-data svg path {
+    fill:#303030;
+}
+
+
+.user-label {
+    width: 308px;
+    height: 32px;
+    padding: 10px 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.user-label p {
+    margin-left: 4px;
+}
+
+
+
+.user-info-tab ul {
+    width: 320px;
+    padding: 4px 5px;
+    list-style: none;
+    border: 1px solid #F1F1F1;
+    border-left: 0;
+    border-right: 0;
+}
+
+.user-info-tab ul li {
+    padding: 6px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+}
+
+.user-info-tab ul:nth-of-type(2) {
+    border: 0;
+}
+
+
+.user-info-tab ul li:hover {
+    background-color: #F1F1F1;
+}
+
+#label.active {
+    border: 1px solid #005BD3;
+}
+
+
+
+@media (max-width:390px) {
+    
+    body,.container {
+        width: 390px;
+    }
+
+
+    nav {
+        width: 390px;
+        height: 58px;
+        padding: 0 15px;
+    }
+
+
+    #shopify-logo {
+        width: 32px;
+        height: 32px;
+        /* background-color: red; */
+
+        background-image: url(https://crushingit.tech/hackathon-assets/shopify-icon.svg);
+    }
+
+    #search {
+        width: 238px;
+        height: 32px;
+    }
+
+    .input-control::after {
+        content:'';
+        position: absolute;
+        top: 5px;
+        left: 10px;
+    }
+    
+    #search::placeholder {
+        text-indent: 35px;
+    }
+
+    .notifications {
+        width: 72px;
+        height: auto;
+    }
+
+
+    #user-info {
+        width: 32px;
+        height: 32px;
+    }
+
+    #user-info p {
+        font-size: 14px;
+        text-indent: 5px;
+        color: white;
+        display: none;
+    }
+
+
+    #user-logo {
+        width: 32px;
+        height: 32px;
+        margin-right: 0px;
+    }
+
+
+
+
+    
+    /* notification display tabs */
+
+    .notification-display {
+        top: 80px;
+        right: 15px;
+    }
+
+    .notification-bell-tab {
+        width: 358px;
+        height: 136px;
+    }
+
+    /* notification display tabs */
+
+
+}
