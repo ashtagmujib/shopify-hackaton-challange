@@ -109,7 +109,21 @@ const dts = document.querySelectorAll('#dts')
 
 
 dts.forEach(detail => {
+
     detail.addEventListener('click', e=> {
-        detail.classList.toggle('active')
+        if(e.target.matches('#dts-link')) {
+            detail.classList.toggle('active')
+        }
+
+        else if(e.target.matches('svg')) {
+            let checkBar = detail.querySelector('#check-bar');
+            checkBar.classList.add('inprogress')
+
+            checkBar.classList.remove('inprogress')
+            checkBar.classList.toggle('active')
+            setInterval(() => {
+            }, 3000)
+
+        }
     })
 })

@@ -590,12 +590,50 @@ main {
 #check-bar {
     width: 25px;
     height: 25px;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
-#check-bar svg path {
-    fill: red;
+#check-bar svg {
+    width: 25px;
+    height: 25px;
 }
+
+
+#check-bar.inprogress {
+    background-image: url(https://crushingit.tech/hackathon-assets/icon-spinner.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    /* animation: anim1 0.3s infinite; */
+}
+
+#check-bar.inprogress #check-bar svg {
+    opacity: 0;
+}
+
+
+@keyframes anim1 {
+    from {
+        transform: rotate3d(0turn);
+    }
+
+    to {
+        transform: rotate3d(1turn);
+    }
+}
+
+
+#check-bar.active {
+    background-image: url(https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#check-bar.active svg {
+    opacity: 0;
+}
+
+
 
 
 #details {
@@ -878,6 +916,7 @@ main {
     #check-bar {
         width: 15px;
         height: 15px;
+        margin-right: 15px;
     }
     
     
