@@ -442,6 +442,12 @@ main {
     align-items: center;
     justify-content: space-between;
     color: white;
+
+}
+
+.trial-period.removed {
+    transform: translateX(-110vw);
+    transition: all 0.3s ease-out;
 }
 
 .trial-period div {
@@ -470,12 +476,12 @@ main {
 #remove-trial {
     width: 20px;
     height: 20px;
-    background-color: red;
 }
 
 .trial-period p {
-    color:white;
+    color:#FFFFFF;
 }
+
 
 .setup-guide {
     width:800px;
@@ -501,8 +507,17 @@ main {
 #setup .arrow {
     width: 20px;
     height: 20px;
-    background-color: blue;
+
+    background-image: url(https://crushingit.tech/hackathon-assets/icon-arrow-down.svg);
+    background-repeat: no-repeat;
 }
+
+#setup .arrow.active {
+    background-image: url(https://crushingit.tech/hackathon-assets/icon-arrow-up.svg);
+    background-repeat: no-repeat;
+    transition: 0.2s ease-in;
+}
+
 
 
 #progress-tab {
@@ -534,6 +549,17 @@ main {
     width: 100%;
     height: auto;
     margin-top: 20px;
+
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#setup-details.active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transform: all 0.3s ease-in-out;
 }
 
 .setup {
@@ -564,9 +590,11 @@ main {
 #check-bar {
     width: 25px;
     height: 25px;
-    border: 1px dotted red;
-    border-radius: 50%;
     margin-right: 10px;
+}
+
+#check-bar svg path {
+    fill: red;
 }
 
 
@@ -764,6 +792,10 @@ main {
     }
     
 
+    #remove-trial svg path {
+        fill: #616161
+    }
+
     
     .trial-period div {
         width: 139px;
@@ -811,7 +843,6 @@ main {
     #setup .arrow {
         width: 20px;
         height: 20px;
-        background-color: blue;
 
         position: absolute;
         top: 20px;

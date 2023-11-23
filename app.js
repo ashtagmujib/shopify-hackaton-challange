@@ -11,7 +11,14 @@ const
     userinfotab = document.querySelector('.user-info-tab'),
 
     // ul = document.querySelectorAll('ul')
-    label = document.querySelectorAll('#label')
+    label = document.querySelectorAll('#label'),
+    trialPeriod = document.querySelector('.trial-period'),
+    removeTrial = document.querySelector('#remove-trial'),
+
+
+    setUp = document.querySelector('#setup')
+    arrow = document.querySelector('.arrow'),
+    setupDetails = document.querySelector('#setup-details')
 ;
 
 
@@ -36,9 +43,6 @@ userIcon.addEventListener('click', ()=> {
 })
 
 
-
-
-
 notificationDash.addEventListener('click' ,()=> {
     notificationDash.classList.toggle('active');
 })
@@ -46,6 +50,47 @@ notificationDash.addEventListener('click' ,()=> {
 notificationCheck.addEventListener('click', () => {
     notificationCheck.classList.toggle('active');
 })
+
+
+removeTrial.addEventListener('click' ,e=> {
+    trialPeriod.classList.add('removed');
+
+    setTimeout(() => {
+        document.querySelector('main').removeChild(trialPeriod)
+    }, 500);
+
+})
+
+
+
+
+setUp.addEventListener('click', e=> {
+    if(e.target.matches('.arrow')) {
+
+        arrow.classList.toggle('active');
+
+        if(arrow.classList.contains('active')) {
+            setupDetails.classList.add('active');
+        } else {
+            setupDetails.classList.remove('active');
+        }
+    }
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
