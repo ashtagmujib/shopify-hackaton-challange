@@ -146,7 +146,7 @@ dts.forEach(detail => {
                     setTimeout (() => {
                         checkBar.parentElement.parentElement.classList.remove('active')
                         checkBar.parentElement.parentElement.nextElementSibling.classList.add('active')
-                    }, 1002)
+                    }, 3050)
 
                     
                 }
@@ -154,7 +154,7 @@ dts.forEach(detail => {
                 else {
                     checkCircle.style.display = 'block';
                 }
-            }, 1000)
+            }, 3000)
             
 
         }
