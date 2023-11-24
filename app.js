@@ -103,6 +103,12 @@ label.forEach(list => {
 
     list.addEventListener('click', e=> {
         e.target.classList.toggle('active')
+
+        label.forEach(lb => {
+            if(lb !== e.target) {
+                lb.classList.remove('active')
+            }
+        })
     })
 
 })
