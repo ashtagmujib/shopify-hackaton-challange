@@ -115,14 +115,15 @@ const dts = document.querySelectorAll('#dts')
 
 dts.forEach(detail => {
 
-    // let checkBar = detail.querySelector('#check-bar')
-
     detail.addEventListener('click', e=> {
 
+        dts.forEach(dt => {
+            if(dt !== detail) {
+                dt.classList.remove('active')
+            }
+        })
+
         detail.classList.add('active');
-
-        
-
 
         if(e.target.matches('#check-bar') || e.target.matches('#check-circle')) {
             
@@ -142,10 +143,12 @@ dts.forEach(detail => {
     
                 if(checkBar.classList.contains('active')) {
                     loader.style.display = 'none';
-
+                
                     setTimeout (() => {
-                        checkBar.parentElement.parentElement.classList.remove('active')
-                        checkBar.parentElement.parentElement.nextElementSibling.classList.add('active')
+                        let nextTab = checkBar.parentElement.parentElement 
+                        nextTab.classList.remove('active')
+                        nextTab.nextElementSibling.classList.add('active')
+
                     }, 1001)
 
                     
@@ -155,6 +158,7 @@ dts.forEach(detail => {
                     checkCircle.style.display = 'block';
                 }
             }, 1000)
+
             
 
         }
