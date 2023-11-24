@@ -515,7 +515,6 @@ main {
 #setup .arrow.active {
     background-image: url(https://crushingit.tech/hackathon-assets/icon-arrow-up.svg);
     background-repeat: no-repeat;
-    transition: 0.2s ease-in;
 }
 
 
