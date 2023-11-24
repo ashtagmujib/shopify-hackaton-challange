@@ -595,12 +595,16 @@ main {
 
 #check-bar #loader {
     display: none;
-    animation: anim1 0.5s infinite;
-
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0;
+}
+
+
+#loader.inprogress {
+   display:block;
+   animation: anim1 0.5s infinite;
+   opacity:0;  
 }
 
 #check-bar svg {
@@ -613,12 +617,12 @@ main {
 
 @keyframes anim1 {
     from {
-        transform: rotate(0turn);
+        transform: rotate(0);
         opacity: 0;
     }
 
     to {
-        transform: rotate(2turn);
+        transform: rotate(360deg);
         opacity: 1;
     }
 }
