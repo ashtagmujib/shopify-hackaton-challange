@@ -591,6 +591,17 @@ main {
     width: 25px;
     height: 25px;
     margin-right: 5px;
+    position: relative;
+}
+
+#check-bar #loader {
+    display: none;
+    animation: anim1 0.5s infinite;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
 
 #check-bar svg {
@@ -599,26 +610,17 @@ main {
 }
 
 
-#check-bar.inprogress {
-    background-image: url(https://crushingit.tech/hackathon-assets/icon-spinner.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    /* animation: anim1 0.3s infinite; */
-}
-
-#check-bar.inprogress #check-bar svg {
-    opacity: 0;
-}
 
 
 @keyframes anim1 {
     from {
-        transform: rotate3d(0turn);
+        transform: rotate(0);
+        opacity: 0;
     }
 
     to {
-        transform: rotate3d(1turn);
+        transform: rotate(360deg);
+        opacity: 1;
     }
 }
 
@@ -628,11 +630,6 @@ main {
     background-repeat: no-repeat;
     background-size: contain;
 }
-
-#check-bar.active svg {
-    opacity: 0;
-}
-
 
 
 
@@ -914,8 +911,6 @@ main {
 
 
     #check-bar {
-        width: 15px;
-        height: 15px;
         margin-right: 15px;
     }
     

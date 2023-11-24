@@ -111,18 +111,41 @@ const dts = document.querySelectorAll('#dts')
 dts.forEach(detail => {
 
     detail.addEventListener('click', e=> {
-        if(e.target.matches('#dts-link')) {
-            detail.classList.toggle('active')
+        let checkBar = detail.querySelector('#check-bar')
+
+        if(e.target.matches('#details-header') || e.target.matches('#dts-link')) {
+            detail.classList.add('active')
         }
 
-        else if(e.target.matches('svg')) {
-            let checkBar = detail.querySelector('#check-bar');
-            checkBar.classList.add('inprogress')
 
-            checkBar.classList.remove('inprogress')
-            checkBar.classList.toggle('active')
-            setInterval(() => {
-            }, 3000)
+
+
+
+        
+
+        else if(e.target.matches('#check-bar') || e.target.matches('#check-circle')) {
+            
+            let loader = detail.querySelector('#loader'),
+                checkCircle = detail.querySelector('#check-circle');
+            ;
+
+            loader.style.display = 'block';
+            checkCircle.style.display = 'none';
+
+
+            setTimeout(() => {
+                loader.style.display = 'none';
+                checkBar.classList.toggle('active');
+    
+                if(checkBar.classList.contains('active')) {
+                    loader.style.display = 'none';
+                }
+
+                else if(!checkBar.classList.contains('active')) {
+                    checkCircle.style.display = 'block';
+                }
+            }, 300)
+            
 
         }
     })
