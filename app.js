@@ -139,16 +139,16 @@ dts.forEach(detail => {
                 checkCircle = detail.querySelector('#check-circle');
             ;
 
-            loader.style.display = 'block';
+            loader.classList.add('inprogress')
             checkCircle.style.display = 'none';
 
 
             setTimeout(() => {
-                loader.style.display = 'none';
+                loader.classList.remove('inprogress')
                 checkBar.classList.toggle('active');
     
                 if(checkBar.classList.contains('active')) {
-                    loader.style.display = 'none';
+                    loader.classList.remove('inprogress')
                 
                     setTimeout (() => {
                         let nextTab = checkBar.parentElement.parentElement 
