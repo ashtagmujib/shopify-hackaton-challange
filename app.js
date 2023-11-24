@@ -147,7 +147,12 @@ dts.forEach(detail => {
                     setTimeout (() => {
                         let nextTab = checkBar.parentElement.parentElement 
                         nextTab.classList.remove('active')
-                        nextTab.nextElementSibling.classList.add('active')
+
+                        if(nextTab.nextElementSibling) {
+                            nextTab.nextElementSibling.classList.add('active')
+                        } else {
+                            nextTab.classList.remove('active')
+                        }
 
                     }, 1001)
 

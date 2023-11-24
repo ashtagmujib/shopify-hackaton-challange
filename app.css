@@ -613,12 +613,12 @@ main {
 
 @keyframes anim1 {
     from {
-        transform: rotate(0);
+        transform: rotate(0turn);
         opacity: 0;
     }
 
     to {
-        transform: rotate(360deg);
+        transform: rotate(2turn);
         opacity: 1;
     }
 }
