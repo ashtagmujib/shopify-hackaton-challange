@@ -143,15 +143,18 @@ dts.forEach(detail => {
                 if(checkBar.classList.contains('active')) {
                     loader.style.display = 'none';
 
-                    checkBar.parentElement.parentElement.classList.remove('active')
-                    checkBar.parentElement.parentElement.nextElementSibling.classList.add('active')
+                    setTimeout (() => {
+                        checkBar.parentElement.parentElement.classList.remove('active')
+                        checkBar.parentElement.parentElement.nextElementSibling.classList.add('active')
+                    }, 1002)
+
                     
                 }
 
                 else {
                     checkCircle.style.display = 'block';
                 }
-            }, 300)
+            }, 1000)
             
 
         }
