@@ -537,7 +537,7 @@ main {
 }
 
 #progress-indicator {
-    width:20px;
+    width:0%;
     height: 4px;
     background-color: #1C181D;
     border-top-left-radius: 5px;

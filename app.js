@@ -16,11 +16,16 @@ const
     removeTrial = document.querySelector('#remove-trial'),
 
 
-    setUp = document.querySelector('#setup')
+    setUp = document.querySelector('#setup'),
     arrow = document.querySelector('.arrow'),
-    setupDetails = document.querySelector('#setup-details')
+    setupDetails = document.querySelector('#setup-details'),
+
+    progressIndicator = document.querySelector('#progress-indicator'),
+    progressCount = document.querySelector('#progress-count')
 ;
 
+
+let progress = [];
 
 
 // evennt and micro interractions
@@ -110,22 +115,20 @@ const dts = document.querySelectorAll('#dts')
 
 dts.forEach(detail => {
 
+    // let checkBar = detail.querySelector('#check-bar')
+
     detail.addEventListener('click', e=> {
-        let checkBar = detail.querySelector('#check-bar')
 
-        if(e.target.matches('#details-header') || e.target.matches('#dts-link')) {
-            detail.classList.add('active')
-        }
-
-
-
-
+        detail.classList.add('active');
 
         
 
-        else if(e.target.matches('#check-bar') || e.target.matches('#check-circle')) {
+
+        if(e.target.matches('#check-bar') || e.target.matches('#check-circle')) {
             
-            let loader = detail.querySelector('#loader'),
+            let 
+                checkBar = detail.querySelector('#check-bar')
+                loader = detail.querySelector('#loader'),
                 checkCircle = detail.querySelector('#check-circle');
             ;
 
@@ -139,9 +142,13 @@ dts.forEach(detail => {
     
                 if(checkBar.classList.contains('active')) {
                     loader.style.display = 'none';
+
+                    checkBar.parentElement.parentElement.classList.remove('active')
+                    checkBar.parentElement.parentElement.nextElementSibling.classList.add('active')
+                    
                 }
 
-                else if(!checkBar.classList.contains('active')) {
+                else {
                     checkCircle.style.display = 'block';
                 }
             }, 300)
@@ -150,3 +157,5 @@ dts.forEach(detail => {
         }
     })
 })
+
+
