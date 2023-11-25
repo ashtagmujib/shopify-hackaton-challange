@@ -23,11 +23,13 @@ const
     progressIndicator = document.querySelector('#progress-indicator'),
     progressCount = document.querySelector('#progress-count'),
 
-    planBtn = document.querySelectorAll('.plan-btn')
+    planBtn = document.querySelectorAll('.plan-btn'),
+    dts = document.querySelectorAll('#dts')
 ;
 
 
 let progress = [];
+let iscompleted = 0;
 
 
 // evennt and micro interractions
@@ -102,7 +104,7 @@ label.forEach(list => {
 
 
 
-const dts = document.querySelectorAll('#dts')
+
 
 dts.forEach(detail => {
 
@@ -129,13 +131,15 @@ dts.forEach(detail => {
 
 
             setTimeout(() => {
-                loader.classList.remove('inprogress')
+                loader.classList.remove('inprogress');
                 checkBar.classList.toggle('active');
     
                 if(checkBar.classList.contains('active')) {
-                    loader.classList.remove('inprogress')
+                    loader.classList.remove('inprogress');
+
+                    iscompleted ++
                     
-                
+
                     let nextTab = checkBar.parentElement.parentElement 
                     nextTab.classList.remove('active')
 
@@ -145,18 +149,32 @@ dts.forEach(detail => {
                     } else {
                         nextTab.classList.remove('active')
                     }
-
                     
                 }
 
                 else {
                     checkCircle.style.display = 'block';
+                    iscompleted --
                 }
+
+                updateProgress()
+                progressCount.innerText = `${iscompleted}/5 completed `;
             }, 500)
 
 
         }
     })
+
+
 })
+
+
+
+function updateProgress() {
+    let perct = (iscompleted / 5) * 100;
+
+    progressIndicator.style.width = `${perct}%`
+}
+
 
 
