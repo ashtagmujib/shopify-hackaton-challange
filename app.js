@@ -85,20 +85,6 @@ setUp.addEventListener('click', e=> {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 label.forEach(list => {
 
     list.addEventListener('click', e=> {
@@ -117,7 +103,6 @@ label.forEach(list => {
 
 
 const dts = document.querySelectorAll('#dts')
-
 
 dts.forEach(detail => {
 
@@ -149,6 +134,8 @@ dts.forEach(detail => {
     
                 if(checkBar.classList.contains('active')) {
                     loader.style.display = 'none';
+                    
+                    
                 
                     setTimeout (() => {
                         let nextTab = checkBar.parentElement.parentElement 
@@ -156,11 +143,12 @@ dts.forEach(detail => {
 
                         if(nextTab.nextElementSibling) {
                             nextTab.nextElementSibling.classList.add('active')
+                          
                         } else {
                             nextTab.classList.remove('active')
                         }
 
-                    }, 1001)
+                    }, 1000)
 
                     
                 }
@@ -170,6 +158,14 @@ dts.forEach(detail => {
                 }
             }, 1000)
 
+
+
+            let cb = Array.from(document.querySelectorAll('#check-bar')) 
+            cb.forEach(dts => {
+                if(dts.classList.contains('active')) {
+                    console.log(1)
+                }
+            })
             
 
         }

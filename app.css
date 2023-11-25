@@ -32,6 +32,11 @@ nav {
 
 }
 
+a{
+    text-decoration: none;
+    color: #1C181D;
+}
+
 
 #shopify-logo {
     width: 200px;
@@ -374,31 +379,33 @@ nav {
     width: 308px;
     height: 32px;
     padding: 10px 5px;
+    margin-top: 5px;
 
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-.user-label p {
-    margin-left: 4px;
-}
 
+
+#label {
+    list-style: none;
+    border-radius:10px;
+}
 
 
 .user-info-tab ul {
     width: 320px;
     padding: 4px 5px;
-    list-style: none;
     border: 1px solid #F1F1F1;
     border-left: 0;
     border-right: 0;
 }
 
 .user-info-tab ul li {
+    list-style: none;
     padding: 6px;
     margin-bottom: 3px;
-    border-radius: 10px;
 }
 
 .user-info-tab ul:nth-of-type(2) {
@@ -406,12 +413,13 @@ nav {
 }
 
 
-.user-info-tab ul #label:hover {
+#label:hover {
     background-color: #F1F1F1;
 }
 
 #label.active {
     border: 1px solid #005BD3;
+
 }
 
 
@@ -631,6 +639,10 @@ main {
 }
 
 
+#dts {
+    width: 100%;
+    padding: 15px 15px 0;
+}
 
 #details {
     width: 100%;
@@ -643,29 +655,31 @@ main {
     display: none;
 }
 
-#dts {
-    width: 100%;
-    padding: 15px;
-}
 
 
 #dts.active {
     display: block;
     background-color: #F1F1F1;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 #dts.active #details {
     display: flex;
+    align-items: center;
 }
 
 
 
 #dts-container {
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
+    justify-content: center;
+    padding-left: 30px;
+    padding-bottom:15px;
 }
+
 
 #dts-container a {
     text-decoration: none;
@@ -674,9 +688,10 @@ main {
 }
 
 #dts-container button {
-    width: 150px;
+    width: auto;
+    padding: 5px 10px;
     height: 30px;
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: #1C181D;
     color: #FFFFFF;
     border-radius: 5px;
@@ -684,15 +699,12 @@ main {
     outline: none;
 }
 
+#dts-container button:focus {
+    border: 2px solid #005BD3;
+}
 
-.image {
-    width: 200px;
-    height: 100px;
-    background-color: red;
-
-    position:absolute;
-    top: 0px;
-    right: 0px;
+#image {
+    margin-top: -40px;
 }
 
 
@@ -901,7 +913,7 @@ main {
     }
 
     #progress-indicator {
-        width:20px;
+        width:0;
         height: 4px;
         background-color: #1C181D;
         border-top-left-radius: 5px;
@@ -910,31 +922,38 @@ main {
 
 
     #check-bar {
-        margin-right: 15px;
+        margin-right: 5px;
     }
     
     
     #details {
-        padding: 15px 25px;
+        padding: 15px 5px 15px 15px ;
     }
 
+
     #dts-container {
-        width: 20%;
+        width: 100%;
+        padding-left: 15px;
+        padding-bottom:10px;
     }
+
+
+    #image {
+        margin-top: -40px;
+    }
+
 
     #dts-container a {
         margin-top: 10px;
     }
     
     
-    .image {
-        width: 150px;
-        height: 100px;
-        background-color: red;
-    
-        position:absolute;
-        top: 20px;
-        right: 20px;
+    .customize {
+        display: block;
+    }
+
+    .payment-setup, .name-store, .add-domain, .add-product {
+        display: none;
     }
     
 
