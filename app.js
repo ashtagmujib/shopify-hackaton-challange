@@ -135,20 +135,16 @@ dts.forEach(detail => {
                 if(checkBar.classList.contains('active')) {
                     loader.classList.remove('inprogress')
                     
-                    
                 
-                    setTimeout (() => {
-                        let nextTab = checkBar.parentElement.parentElement 
+                    let nextTab = checkBar.parentElement.parentElement 
+                    nextTab.classList.remove('active')
+
+                    if(nextTab.nextElementSibling) {
+                        nextTab.nextElementSibling.classList.add('active')
+                      
+                    } else {
                         nextTab.classList.remove('active')
-
-                        if(nextTab.nextElementSibling) {
-                            nextTab.nextElementSibling.classList.add('active')
-                          
-                        } else {
-                            nextTab.classList.remove('active')
-                        }
-
-                    }, 1000)
+                    }
 
                     
                 }
@@ -156,7 +152,7 @@ dts.forEach(detail => {
                 else {
                     checkCircle.style.display = 'block';
                 }
-            }, 1000)
+            }, 800)
 
 
 
