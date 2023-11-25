@@ -133,7 +133,7 @@ dts.forEach(detail => {
                 checkBar.classList.toggle('active');
     
                 if(checkBar.classList.contains('active')) {
-                    loader.style.display = 'none';
+                    loader.classList.remove('inprogress')
                     
                     
                 
@@ -160,12 +160,12 @@ dts.forEach(detail => {
 
 
 
-            let cb = Array.from(document.querySelectorAll('#check-bar')) 
-            cb.forEach(dts => {
-                if(dts.classList.contains('active')) {
-                    console.log(1)
-                }
-            })
+            // let cb = Array.from(document.querySelectorAll('#check-bar')) 
+            // cb.forEach(dts => {
+            //     if(dts.classList.contains('active')) {
+            //         console.log(1)
+            //     }
+            // })
             
 
         }
