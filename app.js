@@ -21,7 +21,9 @@ const
     setupDetails = document.querySelector('#setup-details'),
 
     progressIndicator = document.querySelector('#progress-indicator'),
-    progressCount = document.querySelector('#progress-count')
+    progressCount = document.querySelector('#progress-count'),
+
+    planBtn = document.querySelectorAll('.plan-btn')
 ;
 
 
@@ -65,8 +67,6 @@ removeTrial.addEventListener('click' ,e=> {
     }, 500);
 
 })
-
-
 
 
 setUp.addEventListener('click', e=> {
@@ -152,17 +152,8 @@ dts.forEach(detail => {
                 else {
                     checkCircle.style.display = 'block';
                 }
-            }, 800)
+            }, 500)
 
-
-
-            // let cb = Array.from(document.querySelectorAll('#check-bar')) 
-            // cb.forEach(dts => {
-            //     if(dts.classList.contains('active')) {
-            //         console.log(1)
-            //     }
-            // })
-            
 
         }
     })

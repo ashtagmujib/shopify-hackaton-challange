@@ -62,7 +62,7 @@ a{
     border: 1px solid #616161;
     border-radius: 5px;
 
-    text-indent: 30px;
+    padding-left: 30px;
     color: #B5B5B5;
 }
 
@@ -92,7 +92,7 @@ a{
 
 
 #search::placeholder {
-    text-indent: 30px;
+    text-indent: 0px;
     color: #B5B5B5;
 }
 
@@ -620,7 +620,7 @@ main {
 
 #check-bar #loader.inprogress {
    display:block;
-   animation: anim1 0.4s infinite; 
+   animation: anim1 0.3s infinite; 
 }
 
 #check-bar svg {
@@ -793,7 +793,7 @@ main {
     }
     
     #search::placeholder {
-        text-indent: 35px;
+        text-indent: 0px;
     }
 
     .notifications {
