@@ -479,10 +479,12 @@ main {
 
     border: 0;
     background-color: #F1F1F1; 
+    color: #303030;
 }
 
 #mobile-btn {
     display: none;
+    color: #303030;
 }
 
 #remove-trial {
@@ -553,6 +555,8 @@ main {
     background-color: #1C181D;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+
+    transition: 0.3s ease-in-out;
 }
 
 
@@ -723,6 +727,7 @@ main {
 
 #import-product {
     background-color: #F1F1F1;
+    color: #303030;
     width: auto;
     padding: 5px 10px;
     height: 30px;
